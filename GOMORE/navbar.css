@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100vh;
+  transition: 0.5s;
+  background-color: rgb(209 213 219); 
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+
+  width: 625px;
+  height: 70px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 15px 25px rgba(0.5, 0.5, 0.5, 0.5);
+}
+.navigation ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation ul li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 100px;
+  height: 70px;
+  border: none;
+  margin: 0 10px;
+  background-color: transparent;
+  font-weight: 500;
+}
+.navigation ul li:hover {
+    border-radius: 0.25rem;
+    margin-top: 5px; 
+    align-items: center;
+}
+/* -------------------------------------------NAVBAR FINISH----------------------------------------------------- */
+
+/* -------------------------------------------DROP UP BUTTON PART START----------------------------------------- */
+.myBtn:hover{
+  cursor: pointer;
+}
+.dropbtn {
+  background-color: transparent;
+  color: black;
+  font-size: 18px; 
+  border: none;
+  padding: 20px 10px;
+  width: 115px;
+  font-weight: 400;
+}
+/* The container <div> - needed to position the dropup content */
+.dropup {
+  position: relative;
+  display: inline-block;
+  margin: 100px;
+}
+/* Dropup content (Hidden by Default) */
+.dropup-content {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  bottom: 50px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/* Links inside the dropup */
+.dropup-content a {
+  color: black;
+  padding: 15px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropup links on hover */
+.dropup-content a:hover {
+  background-color: #ddd;
+  margin-left: 8px;
+  border-radius: 5px;
+}
+/* Show the dropup menu on hover */
+.dropup:hover .dropup-content {
+  display: block;
+}
+/* -------------------------------------------DROP UP BUTTON PART FINISH--------------------------------------*/
+
+/*------------------------------------------------TABLE INFO START--------------------------------------------*/
+
+.table-info{
+  justify-content: center;
+  border-collapse: collapse;
+  position: absolute;
+  height: 90%;
+  right: 10px;
+  display: block;
+  margin: 1em 0;
+  top: 10px;  
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 100px;
+  background-color: white;
+  border-radius: 7px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;;
+}
+.table-info-hidden{
+  display: none;
+}
+.table-info caption{
+  border-bottom: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  margin-left: 10px;
+  color: black;
+  font-size: 24px;
+  font-weight: 500;
+}
+.table-info tr{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.table-info th{
+  display: none;
+}
+.table-info td{
+  display: block;
+}
+.table-info, tr, th, td{
+  border: 1px solid black;
+}
+.table-info td:first-child{
+  padding-top: 0.5em;
+}
+.table-info td:last-child{
+  padding-bottom: 0.5em;
+}
+
+@media (min-width: 480px) {
+  .table-info td:before{
+    display: none;
+ }
+}
+.table-info th, .table-info td{
+  text-align: left;
+}
+@media (min-width: 480px) {
+  .table-info th, .table-info td{
+    display: table-cell;
+    padding: 0.5em 0.5em;
+ }
+  .table-info th:first-child, .table-info td:first-child {
+    padding-left: 10px;
+ }
+  .table-info th:last-child, .table-info td:last-child {
+    padding-right: 0;
+ }
+}
+.table-info-closebtn {
+  color: black;
+  background-color: rgb(209 213 219);
+  display: flex;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.table-info-closebtn:hover {
+    margin-bottom: 8px; 
+    margin-right: 8px;
+}
+/*-------------------------------------------TABLE INFO END------------------------------------------*/
+  
+
+
+/* Change the background color of the dropup button when the dropup content is shown */
+/* .dropup:hover .dropbtn {
+  background-color: #2980B9;
+} */
+ /* .modal.modal-left .modal-dialog, .modal.modal-right .modal-dialog {
+    max-width: 380px;
+    min-height: calc(100vh - 0px);
+}
+.modal.modal-left.show .modal-dialog, .modal.modal-right.show .modal-dialog {
+    transform: translate(0, 0);
+}
+.modal.modal-left .modal-content, .modal.modal-right .modal-content {
+    height: calc(100vh - 0px);
+    overflow-y: auto;
+}
+.modal.modal-left .modal-dialog {
+    transform: translate(-100%, 0);
+    margin: 0px auto 0 0;
+}
+.modal.modal-right .modal-dialog {
+    transform: translate(100%, 0);
+    margin: 0px 0 0 auto;
+} */
